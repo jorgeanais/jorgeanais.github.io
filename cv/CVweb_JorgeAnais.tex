@@ -1,0 +1,187 @@
+%------------------------------------
+% Dario Taraborelli
+% Typesetting your academic CV in LaTeX
+%
+% URL: http://nitens.org/taraborelli/cvtex
+% DISCLAIMER: This template is provided for free and without any guarantee 
+% that it will correctly compile on your system if you have a non-standard  
+% configuration.
+% Some rights reserved: http://creativecommons.org/licenses/by-sa/3.0/
+%------------------------------------
+
+
+%!TEX TS-program = xelatex
+%!TEX encoding = UTF-8 Unicode
+
+\documentclass[11pt, a4paper]{article}
+\usepackage{fontspec} 
+
+
+
+% DOCUMENT LAYOUT
+\usepackage{geometry} 
+\geometry{a4paper, textheight=25cm, marginparsep=-2.8cm, marginparwidth=2.8cm, left=2cm, right=2cm}
+\setlength\parindent{0in}
+
+% FONTS
+\usepackage{xunicode}
+\usepackage{xltxtra}
+\defaultfontfeatures{Mapping=tex-text} % converts LaTeX specials (``quotes'' --- dashes etc.) to unicode
+\setromanfont [Ligatures={Common},Numbers={OldStyle}]{Adobe Caslon Pro}
+\setmonofont[Scale=0.8]{Monaco} 
+\setsansfont [Ligatures={Common}, BoldFont={Fontin Sans Bold}, ItalicFont={Fontin Sans Italic}]{Fontin Sans}
+% ---- CUSTOM AMPERSAND
+\newcommand{\amper}{{\fontspec[Scale=.95]{Adobe Caslon Pro}\selectfont\itshape\&}}
+% ---- MARGIN YEARS
+\usepackage{marginnote}
+\newcommand{\years}[1]{\marginnote{ #1}}
+% \renewcommand*{\raggedrightmarginnote}{}
+% \renewcommand*{\raggedleftmarginnote}{}
+% \reversemarginpar
+
+% HEADINGS
+\usepackage{sectsty} 
+\usepackage[normalem]{ulem} 
+\sectionfont{\rmfamily\mdseries\Large} 
+\subsectionfont{\rmfamily\mdseries\scshape\normalsize} 
+\subsubsectionfont{\rmfamily\bfseries\upshape\normalsize} 
+
+%Loading xcolor with dvipsnames
+\usepackage[dvipsnames]{xcolor}
+
+% PDF SETUP
+% ---- FILL IN HERE THE DOC TITLE AND AUTHOR
+\usepackage[xetex, bookmarks, colorlinks, breaklinks, pdftitle={Jorge Anais - vita},pdfauthor={Jorge Anais}]{hyperref}  
+\hypersetup{linkcolor=teal,citecolor=teal,filecolor=black,urlcolor=teal} 
+
+\usepackage{multicol}
+
+% DOCUMENT
+\begin{document}
+{\LARGE Jorge Anais Vilchez} \\
+
+\hrule
+
+\vspace{0.3cm}
+
+
+\section*{Education}
+\years{Expected 2020} \textbf{Universidad de Antofagasta}, Chile \\
+\textit{Master's candidate in Astronomy}\\
+% {\footnotesize  Thesis: Search and Characterization of Star Cluster Candidates at the Far End of the Galactic Bar}\\
+{\small Advisors: Dr. Sebastian Ramírez Alegría \amper{} Dra. Karla Peña Ramírez}\\
+
+\years{2014} \textbf{Potificia Universidad Católica de Chile}\\
+\textit{Licenciate in Astronomy}\\
+{\small Advisor: Dra. Manuela Zoccali}\\
+
+\section*{Further Degrees}
+\years{2018} \textbf{Duoc UC}, Santiago, Chile.\\
+\textit{Diploma in Software Development}\\
+
+\years{2016} \textbf{Universidad de Antofagasta}, Antofagasta, Chile.\\
+\textit{Diploma in Astro-engineering}\\
+
+
+\section*{Work \amper{} Research Experience}
+
+\years{2020-present} \textbf{Research Assistant}, CITEVA, Universidad de Antofagasta.\\
+\textit{Study on transmission spectroscopy models for Earth-like and Mini-Neptunes \\planetary atmospheres.}\\
+{\small Under the supervision of Dr. Jeremy Tregloan-Reed}\\
+
+\years{2017-present} \textbf{Observer}. Las Campanas Observatory.\\
+\textit{1M2H survey. Photometric transients follow-up using Swope Telescope.}\\
+{\small Under the supervision of Dr. Ryan Foley}\\
+
+\years{2016} \textbf{Research Assistant}, IA, Universidad Católica del Norte.\\
+\textit{Data reduction FORS and Mage instruments.}\\
+{\small Under the supervision of Dr. Christian Moni-Bidin}\\
+
+\years{2014-2015} \textbf{Telescope Operator and Technical Assistant}, LCO.\\
+\textit{CSP II. Photometric SN follow-up using Swope Telescope.}\\
+{\small Under the supervision of Dr. Mark M. Phillips}\\
+
+\years{2014} \textbf{Research Assistant.} Santa Martina Observatory, PUC.\\
+\textit{Data Reduction and observations using ESO50/PUCHEROS spectrograph.}\\
+{\small Under the supervision of Dr. Leonardo Vanzi.}\\ 
+
+\years{2012-2013} \textbf{Research Assistant.} IMUC, PUC.\\
+\textit{Research and Software develpment for medical imaging sonification.}\\
+{\small  Under supervision of Dr. Rodrigo Cádiz and Dr. Patricio de la Cuadra.}\\
+
+\years{2011} \textbf{Summer internship}. IA, PUC.\\
+\textit{Commissioning of the ESO50 telescope. }\\
+{\small Under supervision of Dr. Leonardo Vanzi.}
+
+
+\section*{Observing Experience}
+
+\textbf{Las Campanas Observatory}.\\ Swope 1m Telescope / CCD (>250 nights)\\
+
+\textbf{UA Ckoirama Observatory}.\\ Chakana 0.6 m telescope / CCD\\
+
+\textbf{Calar Alto Astronomical Observatory}.\\ Zeiss 1.23m telescope / CCD\\
+
+\textbf{PUC Santa Martina Observatory}.\\ ESO 50cm Telescope / PUCHEROS Spectrograph
+
+
+
+\section*{Teaching experience}
+\years{2010-2014} \textbf{Pontificia Universidad de Chile.}\\
+\textit{Teaching assistant} for the following courses: Introduction to physics for biological\\
+ sciences, Static and Dynamics for Civil Engineers, Thermodynamics, Optics,\\
+ Astronomical Instrumentation and Electricity and Magnetism.
+
+
+\section*{Software Skills}
+\textbf{Astronomical}: IRAF, Topcat.\\
+\textbf{Computer Programming}:  Python, Java, C, SQL, UNIX Shell scripting, MATLAB.\\
+\textbf{Productivity Applications}: \TeX \ (\LaTeX, BibTeX) and most common office software.\\
+\textbf{Operating Systems}: Linux, Windows.
+\textbf{Github:} \texttt{https://github.com/jorgeanais}
+
+\section*{Languages}
+
+Spanish (native) and English 
+
+
+\section*{Outreach Activities}
+\years{2019} Public Talk: Formación de Sistemas Planetarios y Panspermia. UA.\\
+\years{2018} Facilitador Museo Interactivo Mirador MIM.\\
+\years{2016} Encargado difusión. Departamento de Física, UCN.\\
+\years{2010-2012} Member of \href{https://fisicaitinerante.cl/}{Física Itinerante}.\\
+
+\section*{Conferences \amper{} Schools}
+
+Antofagasta, Chile, 3-8 November 2019. \textit{The XVI Latin American Regional IAU Meeting.}\\
+
+York, United Kingdom, 16-20 September 2019. \textit{Conference From Gas to Stars: The Links between Massive Star and Star Cluster.} \textbf{Contributed Poster}: Massive Open Clusters in VVV data using unsupervised clustering algorithms.\\
+ 
+La Serena, Chile, August 19-28, 2019. \textit{La Serena School for Data Science. Applied Tools for Data Driven Science}. AURA Observatory.\\
+
+% Santiago, Chile, 27-29 January 2016. \textit{Workshop: Programming with CUDA} \\
+
+\section*{Publication List}
+\begin{enumerate}
+  \item Tregloan-Reed, J., Otarola, A., Ortiz, E., Molina, V., \textbf{Anais, J.}, González, R., Colque, J. P., Unda-Sanzana, E., 2020, A\&A, 637, L1. First observations and magnitude measurement of Starlink's Darksat.
+  \item Burns, C. R., Ashall, C., Contreras, C.  et al. including \textbf{Anais, J.} 2020, submitted to ApJ, arXiv:2004.13069. SN 2013aa and SN 2017cbv: Two Sibling Type Ia Supernovae in the spiral galaxy NGC 5643.
+  \item Stritzinger, M. D., Taddia, F., Fraser, M., et al. including \textbf{Anais, J.} 2020, submitted to A\&A, arXiv:2005.00319.  The Carnegie Supernova Project II. Observations of the intermediate luminosity red transient SNhunt120.
+  \item Stritzinger, M. D., Taddia, F., Fraser, M., et al. including \textbf{Anais, J.} 2020, submitted to A\&A, arXiv:2005.00076. The Carnegie Supernova Project II. Observations of the luminous red nova AT 2014ej.
+  \item Holmbo, S.; Stritzinger, M. D.; Shappee, B. J., et al. including \textbf{Anais, J.} 2019, A\&A, 627, A174. Discovery and progenitor constraints on the Type Ia supernova 2013gy.
+  \item Phillips, M. M., Contreras, C., Hsiao, E. Y., et al. including \textbf{Anais, J.} 2019, PASP, 131, 014001. Carnegie Supernova Project-II: Extending the Near-infrared Hubble Diagram for Type Ia Supernovae to z$\sim$0.1.
+  \item Burns, Christopher R.; Parent, Emilie; Phillips, M. M., et al. including \textbf{Anais, J.} 2018, ApJ, 869, 56. The Carnegie Supernova Project: Absolute Calibration and the Hubble Constant.
+  \item Stritzinger, M. D., Anderson, J. P., Contreras, C., et al. including \textbf{Anais, J.} 2018, A\&A, 609, A134. The Carnegie Supernova Project I. Photometry data release of low-redshift stripped-envelope supernovae.
+  \item Krisciunas, K., Contreras, C., Burns, C. R., et al. including \textbf{Anais, J.} 2017, AJ, 154, 211. The Carnegie Supernova Project. I. Third Photometry Data Release of Low-redshift Type Ia Supernovae and Other White Dwarf Explosions.
+  \item Coulter, D. A., Kilpatrick, C. D., Foley, R. J., \textbf{Anais, J.} et al. 2017, ATel, \#10167: Swope Photometric Observations of SN 2017cbv$=$ DLT17u.
+\end{enumerate}
+
+\section*{References}
+References available upon request
+
+\vspace{1cm}
+\begin{center}
+{\small Last updated \today\- •\- Santiago, Chile}\\
+{\scriptsize  Personal webpage curriculum vit\ae.}
+\end{center}
+
+\end{document}
