@@ -14,6 +14,13 @@
   --third-color: hsl(var(--hue-color-pink), 89%, 60%);
   --hue-color-purple: 260;
   --night-color: hsl(var(--hue-color-purple), 56%, 12%);
+  
+  --title-color: #0B0A0A;
+  --text-color: #403A3A;
+  --text-color-light: #707070;
+  --body-color: #FAFAFA;
+  --container-color: #FFF;
+
   /*===== Fuente y tipografia =====*/
   --body-font: 'Poppins', sans-serif;
   --big-font-size: 2rem; 
@@ -39,6 +46,33 @@
   }
 }
 
+/*========== Variables Dark theme ==========*/
+body.dark-theme {
+  --title-color: #F2F2F2;
+  --text-color: #BFBFBF;
+  --body-color: #1A1A1A;
+  --container-color: #252525;
+  --second-color: #F2F2F2;
+}
+
+/*========== Button Dark/Light ==========*/
+.nav__btns {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.change-theme {
+  font-size: 1.25rem;
+  color: var(--title-color);
+  margin-right: var(--mb-2);
+  cursor: pointer;
+}
+
+.change-theme:hover {
+  color: var(--first-color);
+}
+
 /*===== BASE =====*/
 *, ::before, ::after {
   box-sizing: border-box;
@@ -52,10 +86,13 @@ body {
   margin: var(--header-height) 0 0 0;
   font-family: var(--body-font);
   font-size: var(--normal-font-size);
-  color: var(--second-color);
+  color: var(--text-color);
+  background-color: var(--body-color);
+  transition: .3s; /* For dark mode animation */
 }
 
 h1, h2, p {
+  color: var(--title-color);
   margin: 0;
 }
 
@@ -116,8 +153,9 @@ img {
   top: 0;
   left: 0;
   z-index: var(--z-fixed);
-  background-color: #fff;
-  box-shadow: 0 1px 4px rgba(146, 161, 176, 0.15);
+  background-color: var(--body-color);
+  box-shadow: 0 1px 4px rgba(146,161,176,.15);
+  transition: .3s;
 }
 
 /*===== NAV =====*/
@@ -137,7 +175,7 @@ img {
     width: 80%;
     height: 100%;
     padding: 2rem;
-    background-color: var(--second-color);
+    background-color: var(--container-color);
     transition: .5s;
   }
 }
@@ -148,7 +186,7 @@ img {
 
 .nav__link {
   position: relative;
-  color: #fff;
+  color: var(--title-color);
 }
 
 .nav__link:hover {
@@ -166,11 +204,12 @@ img {
 }
 
 .nav__logo {
-  color: var(--second-color);
+  color: var(--title-color);
+  font-weight: var(--font-semi);
 }
 
 .nav__toggle {
-  color: var(--second-color);
+  color: var(--title-color);
   font-size: 1.5rem;
   cursor: pointer;
 }
@@ -224,7 +263,7 @@ img {
   width: max-content;
   margin-bottom: var(--mb-2);
   font-size: 1.5rem;
-  color: var(--second-color);
+  color: var(--title-color);
 }
 
 .home__social-icon:hover {
@@ -269,6 +308,10 @@ img {
 
 .about__subtitle {
   margin-bottom: var(--mb-2);
+}
+
+.about__text {
+  text-align: justify;
 }
 
 .about__img {
@@ -358,14 +401,6 @@ img {
   overflow: hidden;
 }
 
-.work__img img {
-  transition: 1s;
-}
-
-.work__img img:hover {
-  transform: scale(1.1);
-}
-
 /* ===== CONTACT =====*/
 .contact__input {
   width: 100%;
@@ -389,8 +424,8 @@ img {
 
 /* ===== FOOTER =====*/
 .footer {
-  background-color: var(--second-color);
-  color: #fff;
+  background-color: var(--container-color);
+  color: var(--title-color);
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
@@ -497,7 +532,10 @@ img {
     display: none;
   }
   .nav__link {
-    color: var(--second-color);
+    color: var(--title-color);
+  }
+  .nav__btns {
+    margin-left: auto;
   }
   .home {
     padding: 8rem 0 2rem;
@@ -535,4 +573,79 @@ img {
   .home__img {
     width: 450px;
   }
+}
+
+/*===== PORTFOLIO TABS =====*/
+.work__tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: var(--mb-4);
+}
+
+.work__tab {
+  cursor: pointer;
+  margin: 0 var(--mb-2);
+  font-weight: var(--font-semi);
+  color: var(--text-color);
+  transition: .3s;
+}
+
+.work__tab:hover {
+  color: var(--first-color);
+}
+
+.work__tab-active {
+  color: var(--first-color);
+  border-bottom: 2px solid var(--first-color);
+}
+
+.work__content {
+  display: none;
+}
+
+.work__content-active {
+  display: grid;
+}
+
+#teaching, #outreach {
+  row-gap: 2rem;
+  max-width: 800px;
+  margin-left: var(--mb-2);
+  margin-right: var(--mb-2);
+}
+
+@media screen and (min-width: 800px) {
+  #teaching, #outreach {
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+/* Classes for tab content to avoid ScrollReveal hiding them */
+.tab__subtitle {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+}
+
+.tab__text {
+  margin-bottom: var(--mb-4);
+}
+
+/* Responsive YouTube Video Container */
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+  height: 0;
+  overflow: hidden;
+  border-radius: .5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }

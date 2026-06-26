@@ -16,7 +16,7 @@
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">#Astro</a>
+                    <a href="#" class="nav__logo">#Astro #Data</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -24,13 +24,18 @@
                         <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
                         <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
                         <!-- <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li> -->
-                        <li class="nav__item"><a href="#work" class="nav__link">Work</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link">Portfolio</a></li>
                         <!-- <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> -->
                     </ul>
                 </div>
 
-                <div class="nav__toggle" id="nav-toggle">
-                    <i class='bx bx-menu'></i>
+                <div class="nav__btns">
+                    <!-- Theme change button -->
+                    <i class='bx bx-moon change-theme' id="theme-button"></i>
+
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-menu'></i>
+                    </div>
                 </div>
             </nav>
         </header>
@@ -151,15 +156,47 @@
 
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Featured works</h2>
+                <h2 class="section-title">Portfolio</h2>
 
-                <div class="work__container bd-grid">
-                    <a href="https://drive.google.com/file/d/1CO_JjFwDhzl5GADffcRWVfQjJ9BJj8vy/view?usp=sharing" class="work__img">
-                        <img src="assets/img/sgr_decontam.png" alt="LARIM 2023 poster"> LARIM 2023 Poster
+                <div class="work__tabs">
+                    <span class="work__tab work__tab-active" data-target="#research">Research</span>
+                    <span class="work__tab" data-target="#teaching">Teaching</span>
+                    <span class="work__tab" data-target="#outreach">Outreach</span>
+                </div>
+
+                <div class="work__content work__content-active work__container bd-grid" id="research">
+                    <a href="https://www.dropbox.com/scl/fi/6wthv8bozqv7yvf29rf93/PosterLARIM2023_JorgeAnais.pdf?rlkey=2lu49yeavopdhntuuoppuk9vz&st=hf4119be&dl=0" class="work__img" target="_blank" rel="noopener noreferrer">
+                        <img src="assets/img/sgr_decontam.png" alt="PhD thesis"> PhD thesis (Poster)
                     </a>
-                    <a href="https://drive.google.com/file/d/1VhAH1CXiQVX8zqfWYa6adfsu_QMxhwXd/view?usp=share_link" class="work__img">
+                    <a href="https://drive.google.com/file/d/1VhAH1CXiQVX8zqfWYa6adfsu_QMxhwXd/view?usp=share_link" class="work__img" target="_blank" rel="noopener noreferrer">
                         <img src="assets/img/cluster_0789_0.png" alt="Master's thesis"> Master's thesis
                     </a>
+                    <a href="https://ui.adsabs.harvard.edu/user/libraries/veXcb7VPROqU0r03axnXkg" class="work__img" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; background-color: var(--first-color); color: #fff; font-weight: var(--font-semi); text-align: center; padding: 2rem;">
+                        NASA ADS Publications
+                    </a>
+                </div>
+
+                <div class="work__content bd-grid" id="teaching" style="margin-top: 2rem;">
+                    <div>
+                        <h3 class="tab__subtitle" style="text-align: left; margin-bottom: 1rem;">Academic Teaching & Course Development</h3>
+                        <p class="tab__text" style="text-align: left; margin-bottom: 2rem;">Currently, I work as an Assistant Professor at Duoc UC, where I teach Machine Learning, Big Data, and Deep Learning for informatics engineering students. In this role, I focus on guiding students through complex concepts by developing hands-on, project-based curricula utilizing modern frameworks like PyTorch and Keras. Beyond the classroom, I am deeply involved in instructional design; I have developed national-level course structures and rigorous evaluation materials for Machine Learning and Deep Learning programs.</p>
+                    </div>
+                    <div>
+                        <h3 class="tab__subtitle" style="text-align: left; margin-bottom: 1rem;">Early Teaching Experience & Tutoring</h3>
+                        <p class="tab__text" style="text-align: left;">My passion for education began during my undergraduate studies at the Pontificia Universidad Católica de Chile, where I served as a teaching assistant from 2010 to 2014. During this time, I instructed laboratory and theoretical sessions for a diverse range of disciplines, including civil engineering, physics, astronomy, and health sciences. I supported courses such as Elementary Physics, Statics and Dynamics, Thermodynamics, Optics, Astronomical Instrumentation, and Electricity and Magnetism.</p>
+                    </div>
+                </div>
+
+                <div class="work__content bd-grid" id="outreach" style="margin-top: 2rem;">
+                    <div>
+                        <h3 class="tab__subtitle" style="text-align: left; margin-bottom: 1rem;">Science Communication & Outreach</h3>
+                        <p class="tab__text" style="text-align: left; margin-bottom: 2rem;">I am a strong advocate for making science accessible to the public. Since my undergraduate years, I have actively participated in outreach programs like "Física itinerante" and developed interactive astronomy workshops, most notably the "Bling bling universe" initiative. Furthermore, I have written science communication columns for the El Mercurio de Antofagasta newspaper, bridging the gap between academic research and the broader community.</p>
+                        
+                        <!-- Video embed -->
+                        <div class="video-container">
+                            <iframe src="https://www.youtube-nocookie.com/embed/tO_oCO70qTA" title="Bling Bling Universe YouTube Video" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        </div>
+                    </div>
                 </div>
             </section>
 
