@@ -450,6 +450,35 @@ img {
   font-size: var(--smaller-font-size);
 }
 
+.footer__copy a {
+  color: var(--text-color);
+  text-decoration: none;
+}
+
+.footer__copy a:hover {
+  text-decoration: underline;
+}
+
+.footer__ml-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: var(--font-semi);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: opacity 0.3s;
+}
+
+.footer__ml-link:hover {
+  opacity: 0.7;
+}
+
+.footer__ml-logo {
+  height: 1.2rem;
+  width: auto;
+  color: var(--text-color);
+}
+
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
   .home {
