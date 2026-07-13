@@ -631,6 +631,69 @@ img {
   margin-bottom: var(--mb-4);
 }
 
+/*===== CV DROPDOWN =====*/
+.cv-dropdown {
+  position: relative;
+  width: max-content;
+}
+
+.cv-trigger {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-family: var(--body-font);
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.cv-trigger i {
+  font-size: 1rem;
+  transition: transform 0.3s;
+}
+
+.cv-trigger.active i {
+  transform: rotate(180deg);
+}
+
+.cv-menu {
+  display: none;
+  position: absolute;
+  bottom: calc(100% + 0.5rem);
+  left: 0;
+  background-color: var(--container-color);
+  border-radius: 0.5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.25);
+  overflow: hidden;
+  z-index: var(--z-fixed);
+  min-width: 120px;
+}
+
+.cv-menu.show {
+  display: block;
+}
+
+.cv-menu a {
+  display: block;
+  padding: 0.6rem 1rem;
+  color: var(--text-color);
+  font-size: var(--normal-font-size);
+  text-align: left;
+  transition: 0.3s;
+}
+
+.cv-menu a:hover {
+  background-color: var(--first-color);
+  color: #fff;
+}
+
+@media screen and (min-width: 576px) {
+  .cv-menu {
+    bottom: auto;
+    top: calc(100% + 0.5rem);
+  }
+}
+
 /* Responsive YouTube Video Container */
 .video-container {
   position: relative;
