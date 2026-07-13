@@ -97,25 +97,6 @@ sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400
 sr.reveal('a.home__social-icon',{ interval: 200}); 
 sr.reveal('.skills__data, .contact__input',{interval: 200}); 
 
-/*===== CV DROPDOWN TOGGLE =====*/
-const cvTrigger = document.querySelector('.cv-trigger');
-const cvMenu = document.querySelector('.cv-menu');
-
-if (cvTrigger && cvMenu) {
-    cvTrigger.addEventListener('click', (e) => {
-        e.stopPropagation();
-        cvMenu.classList.toggle('show');
-        cvTrigger.classList.toggle('active');
-    });
-
-    document.addEventListener('click', (e) => {
-        if (!cvMenu.contains(e.target) && !cvTrigger.contains(e.target)) {
-            cvMenu.classList.remove('show');
-            cvTrigger.classList.remove('active');
-        }
-    });
-}
-
 /*==================== PORTFOLIO TABS ====================*/
 const tabs = document.querySelectorAll('.work__tab');
 const tabContents = document.querySelectorAll('.work__content');
