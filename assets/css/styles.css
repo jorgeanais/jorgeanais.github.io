@@ -474,6 +474,10 @@ img {
     margin-bottom: 0;
     margin-right: var(--mb-4);
   }
+  .cv-dropdown {
+    margin-bottom: 0;
+    margin-right: var(--mb-4);
+  }
   .home__img {
     width: 300px;
     bottom: 25%;
@@ -635,6 +639,7 @@ img {
 .cv-dropdown {
   position: relative;
   width: max-content;
+  margin-bottom: var(--mb-2);
 }
 
 .cv-trigger {
@@ -645,6 +650,7 @@ img {
   display: flex;
   align-items: center;
   gap: 0.3rem;
+  margin: 0;
 }
 
 .cv-trigger i {
