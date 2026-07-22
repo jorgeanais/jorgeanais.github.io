@@ -73,6 +73,22 @@ body.dark-theme {
   color: var(--first-color);
 }
 
+.change-lang {
+  font-size: .875rem;
+  font-weight: var(--font-semi);
+  color: var(--title-color);
+  border: 1px solid var(--title-color);
+  border-radius: .5rem;
+  padding: .15rem .5rem;
+  cursor: pointer;
+  user-select: none;
+}
+
+.change-lang:hover {
+  color: var(--first-color);
+  border-color: var(--first-color);
+}
+
 /*===== BASE =====*/
 *, ::before, ::after {
   box-sizing: border-box;

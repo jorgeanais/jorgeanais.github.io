@@ -21,15 +21,18 @@
 
                 <div class="nav__menu" id="nav-menu">
                     <ul class="nav__list">
-                        <li class="nav__item"><a href="#home" class="nav__link active">Home</a></li>
-                        <li class="nav__item"><a href="#about" class="nav__link">About</a></li>
+                        <li class="nav__item"><a href="#home" class="nav__link active" data-en="Home" data-es="Inicio">Home</a></li>
+                        <li class="nav__item"><a href="#about" class="nav__link" data-en="About" data-es="Sobre mí">About</a></li>
                         <!-- <li class="nav__item"><a href="#skills" class="nav__link">Skills</a></li> -->
-                        <li class="nav__item"><a href="#work" class="nav__link">Portfolio</a></li>
+                        <li class="nav__item"><a href="#work" class="nav__link" data-en="Portfolio" data-es="Portafolio">Portfolio</a></li>
                         <!-- <li class="nav__item"><a href="#contact" class="nav__link">Contact</a></li> -->
                     </ul>
                 </div>
 
                 <div class="nav__btns">
+                    <!-- Language switch button -->
+                    <span class="change-lang" id="lang-button" title="Switch language / Cambiar idioma">ES</span>
+
                     <!-- Theme change button -->
                     <i class='bx bx-moon change-theme' id="theme-button"></i>
 
@@ -44,7 +47,9 @@
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
-                    <h1 class="home__title">Hi,<br>I'am <span class="home__title-color">Jorge</span><br><span class="home__subtitle-color">Anais Vilchez</span> </h1>
+                    <h1 class="home__title"
+                        data-en-html="Hi,<br>I'am <span class=&quot;home__title-color&quot;>Jorge</span><br><span class=&quot;home__subtitle-color&quot;>Anais Vilchez</span>"
+                        data-es-html="Hola,<br>Soy <span class=&quot;home__title-color&quot;>Jorge</span><br><span class=&quot;home__subtitle-color&quot;>Anais Vilchez</span>">Hi,<br>I'am <span class="home__title-color">Jorge</span><br><span class="home__subtitle-color">Anais Vilchez</span> </h1>
 
                     <!-- <a href="#" class="button">Contact</a> -->
                 </div>
@@ -71,7 +76,7 @@
 
             <!--===== ABOUT =====-->
             <section class="about section " id="about">
-                <h2 class="section-title">About</h2>
+                <h2 class="section-title" data-en="About" data-es="Sobre mí">About</h2>
 
                 <div class="about__container bd-grid">
                     <div class="about__img">
@@ -79,8 +84,10 @@
                     </div>
                     
                     <div>
-                        <h2 class="about__subtitle">Quiubo!</h2>
-                        <p class="about__text">I am an astronomer from Chile. My research interest involves applying
+                        <h2 class="about__subtitle" data-en="Quiubo!" data-es="¡Quiubo!">Quiubo!</h2>
+                        <p class="about__text"
+                            data-en-html="I am an astronomer from Chile. My research interest involves applying artificial intelligence to Astronomy, which has become very important in recent years to take full advantage of the massive astronomical surveys. I got my master's degree at <a href=&quot;https://www.astro.uantof.cl/&quot;>Universidad de Antofagasta</a>, Chile, searching stellar clusters at the far end of the Galactic bar using unsupervised machine learning algorithms. I am currently pursuing a PhD at the same university working with Dr. Javier Alonso García on the characterization of the Sagittarius Dwarf Spheroidal Galaxy at low galactic latitudes."
+                            data-es-html="Soy astrónomo chileno. Mi interés de investigación consiste en aplicar inteligencia artificial a la astronomía, algo que se ha vuelto muy importante en los últimos años para aprovechar al máximo los grandes sondeos astronómicos. Obtuve mi grado de magíster en la <a href=&quot;https://www.astro.uantof.cl/&quot;>Universidad de Antofagasta</a>, Chile, buscando cúmulos estelares en el extremo lejano de la barra galáctica mediante algoritmos de aprendizaje no supervisado. Actualmente curso un doctorado en la misma universidad, trabajando con el Dr. Javier Alonso García en la caracterización de la Galaxia Enana Esferoidal de Sagitario a bajas latitudes galácticas.">I am an astronomer from Chile. My research interest involves applying
                             artificial intelligence to Astronomy, which has become very important in recent years to take full
                             advantage of the massive astronomical surveys. I got my master's degree at 
                             <a href="https://www.astro.uantof.cl/">Universidad de Antofagasta</a>,
@@ -157,37 +164,41 @@
 
             <!--===== WORK =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Portfolio</h2>
+                <h2 class="section-title" data-en="Portfolio" data-es="Portafolio">Portfolio</h2>
 
                 <div class="work__tabs">
-                    <span class="work__tab work__tab-active" data-target="#research">Research</span>
-                    <span class="work__tab" data-target="#teaching">Teaching</span>
-                    <span class="work__tab" data-target="#outreach">Outreach</span>
+                    <span class="work__tab work__tab-active" data-target="#research" data-en="Research" data-es="Investigación">Research</span>
+                    <span class="work__tab" data-target="#teaching" data-en="Teaching" data-es="Docencia">Teaching</span>
+                    <span class="work__tab" data-target="#outreach" data-en="Outreach" data-es="Divulgación">Outreach</span>
                 </div>
 
                 <div class="work__content work__content-active work__container bd-grid" id="research">
                     <a href="https://www.dropbox.com/scl/fi/6wthv8bozqv7yvf29rf93/PosterLARIM2023_JorgeAnais.pdf?rlkey=2lu49yeavopdhntuuoppuk9vz&st=hf4119be&dl=0" class="work__img" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/sgr_decontam.png" alt="PhD thesis"> PhD thesis (Poster)
+                        <img src="assets/img/sgr_decontam.png" alt="PhD thesis"> <span data-en="PhD thesis (Poster)" data-es="Tesis doctoral (Póster)">PhD thesis (Poster)</span>
                     </a>
                     <a href="https://drive.google.com/file/d/1OcrNnFa7S-o3oVHwSqg-SB1IkH94lpzt/view?usp=sharing" class="work__img" target="_blank" rel="noopener noreferrer">
-                        <img src="assets/img/cluster_0789_0.png" alt="Master's thesis"> Master's thesis
+                        <img src="assets/img/cluster_0789_0.png" alt="Master's thesis"> <span data-en="Master's thesis" data-es="Tesis de magíster">Master's thesis</span>
                     </a>
                     <a href="https://ui.adsabs.harvard.edu/user/libraries/veXcb7VPROqU0r03axnXkg" class="work__img" target="_blank" rel="noopener noreferrer" style="display: flex; align-items: center; justify-content: center; background-color: var(--first-color); color: #fff; font-weight: var(--font-semi); text-align: center; padding: 2rem;">
-                        NASA ADS Publications
+                        <span data-en="NASA ADS Publications" data-es="Publicaciones en NASA ADS">NASA ADS Publications</span>
                     </a>
                 </div>
 
                 <div class="work__content bd-grid" id="teaching" style="margin-top: 2rem;">
                     <div>
-                        <h3 class="tab__subtitle" style="text-align: left; margin-bottom: 1rem;">Academic Teaching & Course Development</h3>
-                        <p class="tab__text" style="text-align: left; margin-bottom: 2rem;">Currently, I work as an Assistant Professor at Duoc UC, where I teach Machine Learning, Big Data, and Deep Learning for informatics engineering students. In this role, I focus on guiding students through complex concepts by developing hands-on, project-based curricula utilizing modern frameworks like PyTorch and Keras.</p>
+                        <h3 class="tab__subtitle" style="text-align: left; margin-bottom: 1rem;" data-en="Academic Teaching &amp; Course Development" data-es="Docencia Universitaria y Desarrollo de Cursos">Academic Teaching &amp; Course Development</h3>
+                        <p class="tab__text" style="text-align: left; margin-bottom: 2rem;"
+                            data-en="Currently, I work as an Assistant Professor at Duoc UC, where I teach Machine Learning, Big Data, and Deep Learning for informatics engineering students. In this role, I focus on guiding students through complex concepts by developing hands-on, project-based curricula utilizing modern frameworks like PyTorch and Keras."
+                            data-es="Actualmente trabajo como profesor adjunto en Duoc UC, donde imparto Machine Learning, Big Data y Deep Learning para estudiantes de ingeniería en informática. En este rol, me enfoco en guiar a los estudiantes a través de conceptos complejos, desarrollando currículos prácticos y basados en proyectos con frameworks modernos como PyTorch y Keras.">Currently, I work as an Assistant Professor at Duoc UC, where I teach Machine Learning, Big Data, and Deep Learning for informatics engineering students. In this role, I focus on guiding students through complex concepts by developing hands-on, project-based curricula utilizing modern frameworks like PyTorch and Keras.</p>
                     </div>
                 </div>
 
                 <div class="work__content bd-grid" id="outreach" style="margin-top: 2rem;">
                     <div>
-                        <h3 class="tab__subtitle" style="text-align: left; margin-bottom: 1rem;">Science Communication & Outreach</h3>
-                        <p class="tab__text" style="text-align: left; margin-bottom: 2rem;">I have interest in making science accessible to the public. Since my undergraduate years, I have participated in outreach programs like "Física itinerante" and developed interactive astronomy workshops, most notably the "Bling bling universe" initiative. Furthermore, I have written science communication <a href="https://drive.google.com/drive/folders/1KTrBgYarZ_td92DTQbTHuxdw7D8qn5zj" target="_blank" rel="noopener noreferrer">columns for El Mercurio de Antofagasta</a> newspaper, bridging the gap between academic research and the broader community.</p>
+                        <h3 class="tab__subtitle" style="text-align: left; margin-bottom: 1rem;" data-en="Science Communication &amp; Outreach" data-es="Comunicación Científica y Divulgación">Science Communication &amp; Outreach</h3>
+                        <p class="tab__text" style="text-align: left; margin-bottom: 2rem;"
+                            data-en-html="I have interest in making science accessible to the public. Since my undergraduate years, I have participated in outreach programs like &quot;Física itinerante&quot; and developed interactive astronomy workshops, most notably the &quot;Bling bling universe&quot; initiative. Furthermore, I have written science communication <a href=&quot;https://drive.google.com/drive/folders/1KTrBgYarZ_td92DTQbTHuxdw7D8qn5zj&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>columns for El Mercurio de Antofagasta</a> newspaper, bridging the gap between academic research and the broader community."
+                            data-es-html="Me interesa hacer que la ciencia sea accesible para el público. Desde mis años de pregrado, he participado en programas de divulgación como &quot;Física itinerante&quot; y he desarrollado talleres interactivos de astronomía, destacando la iniciativa &quot;Bling bling universe&quot;. Además, he escrito <a href=&quot;https://drive.google.com/drive/folders/1KTrBgYarZ_td92DTQbTHuxdw7D8qn5zj&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>columnas de divulgación científica para El Mercurio de Antofagasta</a>, acortando la brecha entre la investigación académica y la comunidad en general.">I have interest in making science accessible to the public. Since my undergraduate years, I have participated in outreach programs like "Física itinerante" and developed interactive astronomy workshops, most notably the "Bling bling universe" initiative. Furthermore, I have written science communication <a href="https://drive.google.com/drive/folders/1KTrBgYarZ_td92DTQbTHuxdw7D8qn5zj" target="_blank" rel="noopener noreferrer">columns for El Mercurio de Antofagasta</a> newspaper, bridging the gap between academic research and the broader community.</p>
                         
                         <!-- Video embed -->
                         <div class="video-container">
@@ -221,7 +232,9 @@
                     Venta de Garage
                 </a>
             </p>
-            <p class="footer__copy">Created by Jorge Anais | Based on <a href="https://github.com/bedimcode" target="_blank" rel="noopener noreferrer">Bedimcode</a></p>
+            <p class="footer__copy"
+                data-en-html="Created by Jorge Anais | Based on <a href=&quot;https://github.com/bedimcode&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Bedimcode</a>"
+                data-es-html="Creado por Jorge Anais | Basado en <a href=&quot;https://github.com/bedimcode&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Bedimcode</a>">Created by Jorge Anais | Based on <a href="https://github.com/bedimcode" target="_blank" rel="noopener noreferrer">Bedimcode</a></p>
         </footer>
 
 

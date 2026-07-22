@@ -83,6 +83,36 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
+/*==================== LANGUAGE SWITCH (EN / ES) ====================*/
+const langButton = document.getElementById('lang-button')
+const translatableNodes = document.querySelectorAll('[data-en], [data-en-html]')
+
+function applyLanguage(lang) {
+    translatableNodes.forEach(node => {
+        if (node.dataset.enHtml || node.dataset.esHtml) {
+            const html = lang === 'es' ? node.dataset.esHtml : node.dataset.enHtml
+            if (html) node.innerHTML = html
+        } else {
+            const text = lang === 'es' ? node.dataset.es : node.dataset.en
+            if (text) node.textContent = text
+        }
+    })
+
+    document.documentElement.lang = lang
+    // The button shows the language you'd switch TO
+    langButton.textContent = lang === 'es' ? 'EN' : 'ES'
+    localStorage.setItem('selected-lang', lang)
+}
+
+// Use the previously selected language, or default to English
+const selectedLang = localStorage.getItem('selected-lang') || 'en'
+applyLanguage(selectedLang)
+
+langButton.addEventListener('click', () => {
+    const currentLang = document.documentElement.lang === 'es' ? 'es' : 'en'
+    applyLanguage(currentLang === 'es' ? 'en' : 'es')
+})
+
 /*===== SCROLL REVEAL ANIMATION =====*/
 const sr = ScrollReveal({
     origin: 'top',
