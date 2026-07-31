@@ -81,7 +81,20 @@ themeButton.addEventListener('click', () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+    updateWeatherWidgets()
 })
+
+/*==================== WEATHER WIDGET THEME ====================*/
+function updateWeatherWidgets() {
+    const meteogram = document.getElementById('meteogram-widget')
+    if (!meteogram) return
+
+    const isDark = document.body.classList.contains(darkTheme)
+    meteogram.src = isDark ? meteogram.dataset.srcDark : meteogram.dataset.srcLight
+}
+
+// Apply on page load
+updateWeatherWidgets()
 
 /*==================== LANGUAGE SWITCH (EN / ES) ====================*/
 const langButton = document.getElementById('lang-button')
