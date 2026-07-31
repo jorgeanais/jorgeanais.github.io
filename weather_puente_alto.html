@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <!-- =====BOX ICONS===== -->
+        <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
+
+        <title>Weather - Jorge Anais</title>
+    </head>
+    <body>
+        <!--===== HEADER =====-->
+        <header class="l-header">
+            <nav class="nav bd-grid">
+                <div>
+                    <a href="index.html" class="nav__logo">#Astro</a>
+                </div>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list">
+                        <li class="nav__item"><a href="index.html" class="nav__link" data-en="Home" data-es="Inicio">Home</a></li>
+                        <li class="nav__item"><a href="tools.html" class="nav__link" data-en="Tools" data-es="Herramientas">Tools</a></li>
+                    </ul>
+                </div>
+
+                <div class="nav__btns">
+                    <span class="change-lang" id="lang-button" title="Switch language / Cambiar idioma">ES</span>
+                    <i class='bx bx-moon change-theme' id="theme-button"></i>
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class='bx bx-menu'></i>
+                    </div>
+                </div>
+            </nav>
+        </header>
+
+        <main class="l-main">
+            <!--===== WEATHER =====-->
+            <section class="section" id="weather">
+                <h2 class="tools__section-title" data-en="Weather - Puente Alto, Chile" data-es="El tiempo - Puente Alto, Chile">Weather - Puente Alto, Chile</h2>
+
+                <div class="weather__container">
+                    <!-- Meteogram Widget -->
+                    <div class="weather__widget-box">
+                        <iframe id="meteogram-widget" src="https://www.meteoblue.com/en/weather/widget/meteogram/puente-alto_chile_3875024?geoloc=fixed&temperature_units=CELSIUS&windspeed_units=KILOMETER_PER_HOUR&precipitation_units=MILLIMETER&forecast_days=4&layout=bright&autowidth=auto&user_key=7c2b5b7deda39022&embed_key=3eebea1d76c7adec&sig=cbbd6244e22d4654219fe01a575a475f94f1af0f134d909f68d0e8dadee9e2f3" data-src-light="https://www.meteoblue.com/en/weather/widget/meteogram/puente-alto_chile_3875024?geoloc=fixed&temperature_units=CELSIUS&windspeed_units=KILOMETER_PER_HOUR&precipitation_units=MILLIMETER&forecast_days=4&layout=bright&autowidth=auto&user_key=7c2b5b7deda39022&embed_key=3eebea1d76c7adec&sig=cbbd6244e22d4654219fe01a575a475f94f1af0f134d909f68d0e8dadee9e2f3" data-src-dark="https://www.meteoblue.com/en/weather/widget/meteogram/puente-alto_chile_3875024?geoloc=fixed&temperature_units=CELSIUS&windspeed_units=KILOMETER_PER_HOUR&precipitation_units=MILLIMETER&forecast_days=4&layout=dark&autowidth=auto&user_key=7c2b5b7deda39022&embed_key=d9e9c649091e1234&sig=fc75c0ddc8a3eca84e68201bfe59607569703b8ee2bf038346883365ee1a8d3b" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox" style="width: 100%;height: 700px;border: 0;overflow: hidden;"></iframe>
+                        <div class="weather__widget-credit">
+                            <a href="https://www.meteoblue.com/en/weather/week/index" target="_blank" rel="noopener">meteoblue</a>
+                        </div>
+                    </div>
+
+                    <!-- Satellite Map Widget -->
+                    <div class="weather__widget-box">
+                        <iframe src="https://www.meteoblue.com/en/weather/maps/widget/puente-alto_chile_3875024?windAnimation=0&gust=0&satellite=1&cloudsAndPrecipitation=1&temperature=1&sunshine=1&extremeForecastIndex=1&geoloc=fixed&tempunit=C&lengthunit=metric&windunit=km%252Fh&zoom=5&autowidth=auto&user_key=7c2b5b7deda39022&embed_key=2f9a306d185c78e5&sig=4dee0d402ea9710c0d183fefcdc6f8268ac8a77d5f72d9c9d891910c75d04e69" frameborder="0" scrolling="NO" allowtransparency="true" sandbox="allow-same-origin allow-scripts allow-popups allow-popups-to-escape-sandbox"></iframe>
+                        <div class="weather__widget-credit">
+                            <a href="https://www.meteoblue.com/en/weather/week/index" target="_blank" rel="noopener">meteoblue</a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <!--===== FOOTER =====-->
+        <footer class="footer">
+            <p class="footer__title"></p>
+            <p class="footer__copy"
+                data-en-html="Created by Jorge Anais | Based on <a href=&quot;https://github.com/bedimcode&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Bedimcode</a>"
+                data-es-html="Creado por Jorge Anais | Basado en <a href=&quot;https://github.com/bedimcode&quot; target=&quot;_blank&quot; rel=&quot;noopener noreferrer&quot;>Bedimcode</a>">Created by Jorge Anais | Based on <a href="https://github.com/bedimcode" target="_blank" rel="noopener noreferrer">Bedimcode</a></p>
+        </footer>
+
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+
+        <!--===== MAIN JS =====-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
