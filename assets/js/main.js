@@ -122,9 +122,9 @@ const sr = ScrollReveal({
 //     reset: true
 });
 
-sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text',{}); 
-sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img',{delay: 400}); 
-sr.reveal('a.home__social-icon',{ interval: 200}); 
+sr.reveal('.home__data, .about__img, .skills__subtitle, .skills__text, .tools__section-title',{});
+sr.reveal('.home__img, .about__subtitle, .about__text, .skills__img, .weather__widget-box, .tools__link-card',{delay: 400});
+sr.reveal('a.home__social-icon',{ interval: 200});
 sr.reveal('.skills__data, .contact__input',{interval: 200}); 
 
 /*==================== PORTFOLIO TABS ====================*/

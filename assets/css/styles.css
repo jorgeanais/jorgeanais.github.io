@@ -495,6 +495,130 @@ img {
   color: var(--text-color);
 }
 
+.footer__tools-link {
+  color: var(--text-color-light);
+  text-decoration: none;
+  font-size: var(--smaller-font-size);
+  opacity: 0.3;
+  transition: opacity 0.3s;
+}
+
+.footer__tools-link:hover {
+  opacity: 1;
+}
+
+/* ===== TOOLS PAGE =====*/
+.tools__section {
+  margin-bottom: var(--mb-6);
+}
+
+.tools__section-title {
+  font-size: var(--h2-font-size);
+  color: var(--title-color);
+  margin-bottom: var(--mb-4);
+  text-align: center;
+}
+
+.tools__link-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--mb-2);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 768px) {
+  .tools__link-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.tools__link-card {
+  background-color: var(--container-color);
+  padding: 1.5rem;
+  border-radius: .5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.1);
+  text-decoration: none;
+  color: var(--text-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.tools__link-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 30px rgba(14, 36, 49, 0.15);
+}
+
+.tools__link-icon {
+  font-size: 2rem;
+  flex-shrink: 0;
+}
+
+.tools__link-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.tools__link-name {
+  font-weight: var(--font-semi);
+  color: var(--title-color);
+  font-size: var(--normal-font-size);
+}
+
+.tools__link-desc {
+  font-size: var(--smaller-font-size);
+  color: var(--text-color-light);
+}
+
+/* Meteoblue widgets container */
+.weather__container {
+  display: flex;
+  flex-direction: column;
+  gap: var(--mb-4);
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 900px) {
+  .weather__container {
+    flex-direction: row;
+  }
+}
+
+.weather__widget-box {
+  flex: 1;
+  background-color: var(--container-color);
+  padding: 1rem;
+  border-radius: .5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.1);
+  text-align: center;
+  min-width: 0;
+}
+
+.weather__widget-box iframe {
+  width: 100%;
+  height: 700px;
+  border: 0;
+  overflow: hidden;
+  border-radius: .25rem;
+}
+
+.weather__widget-credit {
+  margin-top: var(--mb-2);
+  font-size: var(--smaller-font-size);
+}
+
+.weather__widget-credit a {
+  color: var(--text-color-light);
+  text-decoration: none;
+}
+
+.weather__widget-credit a:hover {
+  text-decoration: underline;
+}
+
 /* ===== MEDIA QUERIES=====*/
 @media screen and (max-width: 320px) {
   .home {
