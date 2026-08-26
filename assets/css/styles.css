@@ -776,7 +776,7 @@ img {
   display: grid;
 }
 
-#teaching, #outreach {
+#teaching, #outreach, #swope {
   row-gap: 2rem;
   max-width: 800px;
   margin-left: var(--mb-2);
@@ -784,9 +784,75 @@ img {
 }
 
 @media screen and (min-width: 800px) {
-  #teaching, #outreach {
+  #teaching, #outreach, #swope {
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.swope__intro {
+  display: grid;
+  grid-template-columns: minmax(180px, 280px) 1fr;
+  gap: 2rem;
+  align-items: center;
+}
+
+.swope__intro img {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: .5rem;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+}
+
+.swope__gallery,
+.swope__observatory {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.swope__observatory {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.swope__card {
+  display: block;
+  color: var(--text-color);
+  background-color: var(--container-color);
+  border-radius: .5rem;
+  overflow: hidden;
+  box-shadow: 0px 4px 25px rgba(14, 36, 49, 0.15);
+  transition: transform .3s, box-shadow .3s;
+}
+
+.swope__card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0px 8px 30px rgba(14, 36, 49, 0.2);
+}
+
+.swope__card img {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: cover;
+}
+
+.swope__card span {
+  display: block;
+  padding: .75rem 1rem;
+  font-weight: var(--font-semi);
+}
+
+@media screen and (max-width: 575px) {
+  .work__tabs {
+    flex-wrap: wrap;
+    gap: .75rem 0;
+  }
+
+  .swope__intro,
+  .swope__gallery,
+  .swope__observatory {
+    grid-template-columns: 1fr;
   }
 }
 
